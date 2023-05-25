@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+#include<string>
+#include<set>
+#include<iostream>
+#include<vector>
+#include<algorithm>
+using namespace std;	
+
+struct Result{
+Result(): output(){};
+int output1[100];
+};
+
+struct Program(int input1[]){
+// Write code here
+    set<int> setx;
+    Result x;
+    int n = sizeof(input1)/sizeof(input1[0]);
+    for(int i=0; i<n; i++){
+        setx.insert(input1[i]);
+    }
+    vector<int> temp;
+    for(auto &i: setx){
+        temp.push_back(i);
+    }
+    sort(temp.begin(), temp.end(), greater<int>());
+    x.output1[0] = temp[0];
+    x.output1[1] = temp[1];
+    cout<<n<<endl;
+    return x;
+	throw "Function getTwoLargest(int input1[]) not implemented. ";
+}
